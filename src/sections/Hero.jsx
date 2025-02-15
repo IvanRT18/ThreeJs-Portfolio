@@ -11,6 +11,7 @@ import Cube from "../components/Cube.jsx";
 import Rings from "../components/Rings.jsx";
 import {HeroCamera} from "../components/HeroCamera.jsx";
 import Button from "../components/Button.jsx";
+import Basketball from "../components/Basketball.jsx";
 
 const Hero = () => {
     // const x = useControls('HackerRoom', {
@@ -30,7 +31,7 @@ const Hero = () => {
     const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
     return (
-        <section className="min-h-screen border-2 border-blue-500 w-full flex flex-col relative">
+        <section className="min-h-screen border-2 border-blue-500 w-full flex flex-col relative" id="home">
             <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
                 <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">Hello, I am Iván <span className="waving-hand">👋</span></p>
                 <p className="hero_tag text-gray_gradient">Let's build something together</p>
@@ -57,7 +58,7 @@ const Hero = () => {
                         <group>
                             <Target position={sizes.targetPosition}/>
                             <ReactLogo position={sizes.reactLogoPosition}/>
-                            <Cube position={sizes.cubePosition}/>
+                            <Basketball position={sizes.cubePosition}/>
                             <Rings position={sizes.ringPosition}/>
                         </group>
 
